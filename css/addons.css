@@ -1,0 +1,46 @@
+#trackBaddies{
+	height:500px;
+	padding:0px;
+	overflow-y:scroll;
+	overflow-x:hidden;
+}
+
+#trackBaddies li{
+	width:100%;
+	list-style:none;
+	float:left;
+}
+
+#trackBaddies .bad{
+	  -webkit-box-shadow: inset 0 1px 20px rgba(217, 83, 79, 0.3);
+          box-shadow: inset 0 1px 20px rgba(217, 83, 79, 0.3);
+}
+
+#trackBaddies .good{
+	  -webkit-box-shadow: inset 0 1px 20px rgba(71, 164, 71, 0.3);
+          box-shadow: inset 0 1px 20px rgba(71, 164, 71, 0.3);
+}
+
+#trackBaddies .neutral{
+	  -webkit-box-shadow: inset 0 1px 20px rgba(125, 125, 125, 0.3);
+          box-shadow: inset 0 1px 20px rgba(125, 125, 125, 0.3);
+}
+
+#trackBaddies li *{
+	float:left;
+}
+
+#trackBaddies li label{
+	margin:5px 4px 5px 10px;
+}
+
+#trackBaddies li input[type="text"]{
+	width:150px;	
+}
+#trackBaddies li input[type="number"]{
+	width:60px;	
+}
+
+#trackBaddies li select{
+	width:100px;	
+}
