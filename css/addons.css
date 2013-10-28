@@ -11,17 +11,17 @@
 	float:left;
 }
 
-#trackBaddies .bad{
+#trackBaddies .Bad{
 	  -webkit-box-shadow: inset 0 1px 20px rgba(217, 83, 79, 0.3);
           box-shadow: inset 0 1px 20px rgba(217, 83, 79, 0.3);
 }
 
-#trackBaddies .good{
+#trackBaddies .Good{
 	  -webkit-box-shadow: inset 0 1px 20px rgba(71, 164, 71, 0.3);
           box-shadow: inset 0 1px 20px rgba(71, 164, 71, 0.3);
 }
 
-#trackBaddies .neutral{
+#trackBaddies .Neutral{
 	  -webkit-box-shadow: inset 0 1px 20px rgba(125, 125, 125, 0.3);
           box-shadow: inset 0 1px 20px rgba(125, 125, 125, 0.3);
 }
