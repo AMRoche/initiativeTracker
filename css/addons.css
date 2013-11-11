@@ -1,7 +1,7 @@
 #trackBaddies{
-	height:500px;
+	min-height:500px;
 	padding:0px;
-	overflow-y:scroll;
+	padding-bottom:120px;
 	overflow-x:hidden;
 }
 
@@ -43,4 +43,54 @@
 
 #trackBaddies li select{
 	width:100px;	
+}
+#buttonContainer{
+	padding:20px;
+	position:fixed;
+	bottom:0px;
+	left:20px;
+	background-color:#EEE;
+}
+#buttonContainer *{
+	float:left;
+}
+#buttonContainer #JS-sortHigh{
+margin-left:20px;	
+}
+#buttonContainer #JS-sortLow{
+	margin-left:20px;
+}
+#buttonContainer #JS-instructions{
+	clear:left;
+	margin-top:20px;
+}
+#buttonContainer #JS-transparency{
+	margin-left:20px;
+	margin-top:20px;
+}
+
+#buttonContainer.transparent{
+	background-color:rgba(187,187,187,0.25);
+}
+#buttonContainer.transparent #JS-transparency{
+	background-color:rgba(51,51,51,0.3);
+}
+#buttonContainer.transparent #JS-sortHigh, #buttonContainer.transparent #JS-sortLow{
+	background-color:rgba(57,179,215,0.3);
+}
+#buttonContainer.transparent #JS-sortHigh:hover, #buttonContainer.transparent #JS-sortLow:hover{
+	background-color:rgba(57,179,215,0.5);
+}
+
+#buttonContainer.transparent #JS-addNew{
+	background-color:rgba(255,255,255,0.5);
+}
+#buttonContainer.transparent #JS-addNew:hover{
+	background-color:rgba(255,255,255,0.7);
+}
+#buttonContainer.transparent #JS-instructions{
+	background-color:rgba(71,164,71,0.3);
+}
+#buttonContainer.transparent #JS-instructions:hover{
+	background-color:rgba(71,164,71,0.5);
 }

@@ -4,6 +4,7 @@ var generator = {
 	"types" : ["button","text","select","number","number","number"],
 	"id" : ["","name","alignment","mod","roll","init"],
 	"selectBox" : ["Neutral","Good","Bad"],
+	"transparentMenu" : false,
 	"classgiven" : ["btn btn-danger","form-control","form-control","form-control","form-control","form-control"],
 	"createSortObject" : function(){
 		generator.characters.splice(0, generator.characters.length);
@@ -121,6 +122,30 @@ var generator = {
 				if(generator.types[i] == "number")
 				{
 					input.value = 0;
+					if(generator.id[i]=="mod"){
+						input.onkeyup = function(){
+							document.getElementById("init"+idNum).value = parseInt(document.getElementById("roll"+idNum).value,10) + parseInt(document.getElementById("mod"+idNum).value,10);
+						}
+						input.onchange = function(){
+							document.getElementById("init"+idNum).value = parseInt(document.getElementById("roll"+idNum).value,10) + parseInt(document.getElementById("mod"+idNum).value,10);
+						}
+					}
+					if(generator.id[i]=="roll"){
+						input.onkeyup = function(){
+							document.getElementById("init"+idNum).value = parseInt(document.getElementById("roll"+idNum).value,10) + parseInt(document.getElementById("mod"+idNum).value,10);
+						}
+						input.onchange = function(){
+							document.getElementById("init"+idNum).value = parseInt(document.getElementById("roll"+idNum).value,10) + parseInt(document.getElementById("mod"+idNum).value,10);
+						}
+					}
+					if(generator.id[i]=="init"){
+						input.onkeyup = function(){
+							document.getElementById("roll"+idNum).value = parseInt(document.getElementById("mod"+idNum).value,10) + parseInt(document.getElementById("init"+idNum).value,10);
+						}
+						input.onchange = function(){
+							document.getElementById("roll"+idNum).value = parseInt(document.getElementById("init"+idNum).value,10) - parseInt(document.getElementById("mod"+idNum).value,10);
+						}
+					}
 				}
 				li.appendChild(input);
 			}
@@ -157,4 +182,12 @@ document.getElementById("JS-sortLow").addEventListener("click",function(){genera
 document.getElementById("JS-sortHigh").addEventListener("click",function(){generator.createSortObject();generator.objSort("desc");});
 document.getElementById("JS-addNew").addEventListener("click",function(){document.getElementById("trackBaddies").appendChild(generator.newPerp())});
 document.getElementById("trackBaddies").appendChild(generator.newPerp());
+document.getElementById("JS-transparency").addEventListener("click",function(){
+	generator.transparentMenu=!generator.transparentMenu;
+	if(generator.transparentMenu == true){
+		$("#buttonContainer").addClass("transparent");
+	}else{
+		$("#buttonContainer").removeClass("transparent");
+	}
+});
 }
